@@ -1,9 +1,12 @@
 const reducer = (state = 0, action) => {
-  if (action.type === "deposit") {
-    return state + action.payload;
-  } else if (action.type === "withdraw") {
-    return state - action.payload;
-  } else return state;
+  switch (action.type) {
+    case "deposit":
+      return state + action.payload;
+    case "withdraw":
+      return state - action.payload;
+    default:
+      return state;
+  }
 };
 
 export default reducer;

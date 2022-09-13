@@ -22,7 +22,7 @@ export default function Shop() {
         <button
           className="btn btn-success"
           onClick={() => {
-            actions.withdrawMoney(100);
+            actions.depositMoney(100);
           }}
         >
           +
